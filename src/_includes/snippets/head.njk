@@ -1,0 +1,41 @@
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ metadata.description }}">
+  <link rel="icon" type="image/icon" href="{{ '/img/favicon.ico' | url }}">
+  <meta name="author" content="{{ metadata.author }}">
+  <meta name="generator" content="{{ eleventy.generator }}">
+  <meta name="HandheldFriendly" content="true"/>
+  <title>{{ title or metadata.title }}</title>
+  <!-- build:css -->
+  <link rel="stylesheet" href="{{ '/css/theme.css' | url }}">
+   <!-- endbuild -->
+   <style>
+    @font-face {
+      font-family: "Noto Sans";
+      font-style: normal;
+      font-display: swap;
+      src: local(),
+           url("/fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype-variations"),
+           url("/fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype") tech("variations");
+      font-weight: 100 1000;
+      font-stretch: 25% 150%
+    }
+    @font-face {
+      font-family: "Noto Sans";
+      font-style: italic;
+      font-display: swap;
+      src: local(),
+           url("/fonts/NotoSans-Italic-VariableFont_wdth,wght.ttf") format("truetype-variations"),
+           url("/fonts/NotoSans-Italic-VariableFont_wdth,wghtt.ttf") format("truetype") tech("variations");
+      font-weight: 100 1000;
+      font-stretch: 25% 150%
+    }
+   @font-face {
+     font-family: 'Days One';
+     font-style: normal;
+     font-weight: 400;
+     font-display: swap;
+     src: local(''),
+          url('/fonts/DaysOne-Regular.ttf') format('truetype'); 
+   }
+   </style>
