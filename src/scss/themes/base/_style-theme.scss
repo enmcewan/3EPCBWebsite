@@ -98,7 +98,7 @@ body {
 }
 
 .fill-height {
-  height: calc(100vh - 136px);
+  min-height: calc(100vh - 136px);
 }
 
 .landing-card {
@@ -121,7 +121,7 @@ body {
 }
 
 .card__side {
-  height: 52rem;
+  height: 100%;
   transition: all 1.1s ease;
   position: absolute;
   top: 0;
@@ -129,7 +129,7 @@ body {
   width: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 3px;
+  border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
@@ -169,7 +169,7 @@ body {
 }
 
 .card__details {
-  padding: 3rem;
+  padding: 2rem;
 }
 
 ol, ul {
@@ -277,4 +277,43 @@ ol, ul {
 
 .btn--white {
   background-color: whitesmoke;
+}
+
+@include media-breakpoint-up(xs) {
+  .card__heading {
+    font-size: 1.8rem;
+    top: 18.45rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .card__heading {
+    top: 17.8rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .card__heading {
+    top: 17.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .card__heading {
+    top: 17.15rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .card__heading {
+    font-size: 2.4rem;
+    top: 17.65rem;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .card__heading {
+    font-size: 2.8rem;
+    top: 17.15rem;
+  }
 }
