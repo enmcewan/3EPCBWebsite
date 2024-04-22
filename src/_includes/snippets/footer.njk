@@ -4,8 +4,12 @@
 
     if (matchPrefersLight.matches) {
         document.documentElement.setAttribute('data-bs-theme', 'light');
+    } else {
+       document.documentElement.setAttribute('data-bs-theme', 'dark'); 
     }
     matchPrefersLight.addEventListener('change', event => {
         document.documentElement.setAttribute('data-bs-theme', event.matches ? "light" : "dark");
     });
+
+    console.log('matchPrefersLight', matchPrefersLight.matches)
 </script>

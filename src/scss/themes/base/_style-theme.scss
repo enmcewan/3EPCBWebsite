@@ -1,3 +1,7 @@
+:root {
+  $green-gradient: linear-gradient(to right bottom, #34ab00, #050);
+}
+
 body {
   letter-spacing:-.02rem;
 }
@@ -89,16 +93,36 @@ body {
 }
 
 .headline {
-  font-family: 'Days One';
+  // font-family: 'Days One';
   letter-spacing: 0.025em;
   line-height: 1.0;
   color: transparent;
-  background-image: url(/img/pcb01.svg);
-  background-clip: text;
+  // background-image: url(/img/pcb01.svg);
+  // background-clip: text;
 }
 
 .fill-height {
   min-height: calc(100vh - 136px);
+}
+
+.eee-green-grd {
+  background-image: linear-gradient(to right bottom, #34ab00, #050);
+}
+
+.eee-clip-text {
+  background-clip: text;
+  color: transparent;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
 }
 
 .landing-card {
@@ -148,6 +172,7 @@ body {
 
 .card__heading {
   font-size: 2.8rem;
+  line-height: 1.2;
   font-weight: 300;
   text-transform: uppercase;
   text-align: right;
@@ -170,12 +195,6 @@ body {
 
 .card__details {
   padding: 2rem;
-}
-
-ol, ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .card__details ul {
@@ -279,6 +298,10 @@ ol, ul {
   background-color: whitesmoke;
 }
 
+.navbar-nav {
+  font-variant: small-caps;
+}
+
 @include media-breakpoint-up(xs) {
   .card__heading {
     font-size: 1.8rem;
@@ -317,3 +340,35 @@ ol, ul {
     top: 17.15rem;
   }
 }
+
+/* SCSS HEX */
+$india-green: #248f00ff;
+$dark-green: #0a210fff;
+$paynes-gray: #586f7cff;
+$maize: #fce762ff;
+$red-cmyk: #ed1c24ff;
+
+/* SCSS HSL */
+$india-green: hsla(105, 100%, 28%, 1);
+$dark-green: hsla(133, 53%, 8%, 1);
+$paynes-gray: hsla(202, 17%, 42%, 1);
+$maize: hsla(52, 96%, 69%, 1);
+$red-cmyk: hsla(358, 85%, 52%, 1);
+
+/* SCSS RGB */
+$india-green: rgba(36, 143, 0, 1);
+$dark-green: rgba(10, 33, 15, 1);
+$paynes-gray: rgba(88, 111, 124, 1);
+$maize: rgba(252, 231, 98, 1);
+$red-cmyk: rgba(237, 28, 36, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #248f00ff, #0a210fff, #586f7cff, #fce762ff, #ed1c24ff);
+$gradient-right: linear-gradient(90deg, #248f00ff, #0a210fff, #586f7cff, #fce762ff, #ed1c24ff);
+$gradient-bottom: linear-gradient(180deg, #248f00ff, #0a210fff, #586f7cff, #fce762ff, #ed1c24ff);
+$gradient-left: linear-gradient(270deg, #248f00ff, #0a210fff, #586f7cff, #fce762ff, #ed1c24ff);
+$gradient-top-right: linear-gradient(45deg, #248f00ff, #0a210fff, #586f7cff, #fce762ff, #ed1c24ff);
+$gradient-bottom-right: linear-gradient(135deg, #248f00ff, #0a210fff, #586f7cff, #fce762ff, #ed1c24ff);
+$gradient-top-left: linear-gradient(225deg, #248f00ff, #0a210fff, #586f7cff, #fce762ff, #ed1c24ff);
+$gradient-bottom-left: linear-gradient(315deg, #248f00ff, #0a210fff, #586f7cff, #fce762ff, #ed1c24ff);
+$gradient-radial: radial-gradient(#248f00ff, #0a210fff, #586f7cff, #fce762ff, #ed1c24ff);
