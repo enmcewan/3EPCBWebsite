@@ -1,7 +1,8 @@
 ---
 layout: layouts/blank.njk
+permalink: /
 eleventyNavigation:
-  key: home
+  key: Home
   order: 1
 ---
 
@@ -9,20 +10,24 @@ eleventyNavigation:
   <div class="row d-flex justify-content-center align-items-center fill-height">
     <div class="col-12 col-xl-7 text-start my-5 pe-xl-5">
       <h1 class="display-1 headline mb-4 eee-green-grd eee-clip-text fw-bolder">
-        <div>3E PCB</div> 
+        <div>PCB</div> 
         <div>Engineering</div>
-        <div style="letter-spacing: .175rem;">Automation</div>
+        <div style="letter-spacing: .16rem;">Automation</div>
       </h1>
-      <p class="fs-3 mb-4">Innovative software solutions, professional services & industry expertise to take your engineering team to the <span class="fw-bolder eee-green-grd eee-clip-text">next level.</span></p>
+      <p class="fs-3 mb-4">Innovative software, professional services & industry expertise taking your engineering team to the <span class="fw-bolder eee-green-grd eee-clip-text">next level</span>.</p>
       <p class="fs-3 mb-5">Deployed by leading PCB manufacturers around the world, our
          <span class="fw-bolder eee-green-grd eee-clip-text">Engenix<sup class="fw-bolder eee-green-grd eee-clip-text">®</sup></span> 
-         based solutions have been empowering the industry for over <span class="fw-bolder eee-green-grd eee-clip-text">25 years</span>.</p>
-      <a class="btn btn-success eee-green-grd px-5 py-3 me-4 position-relative text-white" href="https://3epcb.com" target="_blank" rel="noopener" >Download
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill copper-fade text-white">v5.2.0<span class="visually-hidden">latest version</span></span></a>
-      <a class="link-fancy py-2" href="https://3epcb.com">Check it out</a>
+         based solutions have been empowering the industry for over <span class="fw-bolder eee-green-grd eee-clip-text">25 years</span>.
+      </p>
+      <div class="d-grid gap-2 col-6 me-auto">
+        <button type="button" class="btn btn-success btn-large eee-green-grd px-5 py-3 position-relative">
+          <a href="/engenix/" target="_blank" rel="noopener" class="fs-5 text-white no-underline">Learn About <strong>Engenix<sup>®</sup></strong></a>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill copper-fade text-white">v5.2.0<span class="visually-hidden">latest version</span></span>
+        </button>
+      </div>
     </div>
     <div class="col-12 col-xl-5">
-    <div class="flex justify-center items-center">
+      <div class="flex justify-center items-center">
         <div class="landing-card">
           <div class="card__side card__side--front">
             <div class="card__picture card__picture--2"></div>
@@ -43,7 +48,7 @@ eleventyNavigation:
           <div class="card__side card__side--back card__side--back-2 card__picture--back">
             <div class="card__cta">
               <div class="card__price-box">
-                <p class="card__price-only">[Proven]</p>
+                <p class="card__price-only fs-1">[C-Proven]</p>
                 <p class="card__price-value">$ROI</p>
               </div>
               <a class="btn btn-lp btn--white" href="#popup">Learn More!</a>
@@ -51,27 +56,80 @@ eleventyNavigation:
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
 
-<div class="wrapper my-vh-5 bg-light text-dark">
+<div class="container-fluid my-vh-5 bg-body text-body" data-bs-theme="dark">
   <div class="container py-vh-4">
+    <div class="row d-flex justify-content-center">
+      <div class="col col-lg-7">
+        <p class="lead yellow-text">
+          PCB manufacturing is a dynamic and fast-paced environment with new processes, materials &amp; manufacturing requirements continuously being introduced.
+        </p>
+        <p class="lead yellow-text">
+          Customers demand rapid prototyping, advanced PCB technology requirements and specification compliance. 
+          With Engenix<sup>&reg;</sup> at the core of pre-production engineering, your team will meet these challenges with ease.
+        </p>
+      </div>
+    </div>
     <div class="row justify-content-between d-flex align-items-stretch py-vh-2">
-      <div class="col-12 col-lg-6">
-        <h2 class="h2">Open source & free</h2>
-        <p>11straps is an open source project released under the MIT license. It is free for everyone. You are welcome to test, contribute and improve it or use it even for commercial projects.</p>
+      <div class="col-12 col-lg-6 py-vh-1">    
+        <div class="d-flex flex-nowrap items-baseline mb-2">
+          <span class="d-inline-flex align-self-center">
+            <svg class="inline-block bs-svg-size bs-svg-color me-3">
+              <use xlink:href="img/bootstrap-icons.svg#speedometer2"></use>
+              <use href="img/bootstrap-icons.svg#speedometer2"></use>
+            </svg>
+          </span>
+          <h2 class="h2 d-inline-flex align-self-center mb-0 title-case">Cut Job Time from hours to mins</h2>
+        </div>
+        <p class="lead">
+          Rules-based Automation is at the core of Engenix<sup>&reg;</sup>.
+          By utilizing rules and data integration, job tasks are completed in seconds.
+        </p>
       </div>
-      <div class="col-12 col-lg-5 py-vh-1">
-        <h2>Eleventy + Bootstrap = 💪</h2>
-        <p>11straps come´s with the static site generator Eleventy and the CSS framework Bootstrap 5 in it. It combines both via npm and Gulp and adds some dev and build magic to it. This website itself is also included as example.</p>
+      <div class="col-12 col-lg-6 py-vh-1">
+        <div class="d-flex flex-nowrap items-baseline mb-2">
+          <span class="d-inline-flex align-self-center">
+            <svg class="inline-block bs-svg-size bs-svg-color me-3">
+              <use xlink:href="img/bootstrap-icons.svg#exclamation-triangle"></use>
+              <use href="img/bootstrap-icons.svg#exclamation-triangle"></use>              
+            </svg>
+          </span>
+          <h2 class="h2 d-inline-flex align-self-center mb-0 title-case">Eliminate errors & duplication</h2>
+        </div>
+        <p class="lead">
+          From simple data-entry typo's to conflicting data, Engenix<sup>&reg;</sup> will find, correct and prevent invalid data from creating invalid outputs. 
+        </p>
       </div>
-      <div class="col-12 col-lg-5 py-vh-1">
-        <h2>Local server & Browser Sync</h2>
-        <p>11straps includes a dev build process with a local server and browser sync. Everything you need for your local live dev environment.</p>
+      <div class="col-12 col-lg-6 py-vh-1">
+        <div class="d-flex flex-nowrap items-baseline mb-2">
+          <span class="d-inline-flex align-self-center">
+            <svg class="inline-block bs-svg-size bs-svg-color me-3">
+              <use xlink:href="img/bootstrap-icons.svg#stopwatch"></use>
+              <use href="img/bootstrap-icons.svg#stopwatch"></use>
+            </svg>
+          </span>
+          <h2 class="h2 d-inline-flex align-self-center mb-0 title-case">Implement changes immediately</h2>
+        </div>
+        <p class="lead">
+          With simple rule &amp; confiuration updates, changes can be implemented in minutes.
+        </p>
       </div>
-      <div class="col-12 col-lg-5 py-vh-1">
-        <h2>Minified and purged output</h2>
-        <p>Once you are done with your local development it´s time for a prod build. The 11straps prod output is a minified HTML site with a minified and purged CSS file and optimized assets. Thats it. Just a clean, fast and static website will come out.</p>
+      <div class="col-12 col-lg-6 py-vh-1">
+        <div class="d-flex flex-nowrap items-baseline mb-2">
+          <span class="d-inline-flex align-self-center">
+            <svg class="inline-block bs-svg-size bs-svg-color me-3">
+              <use xlink:href="img/bootstrap-icons.svg#cash-stack"></use>
+              <use href="img/bootstrap-icons.svg#cash-stack"></use>
+            </svg>
+          </span>
+          <h2 class="h2 d-inline-flex align-self-center mb-0 title-case">Reduce Costs</h2>
+        </div>
+        <p class="lead">
+          By dramatically reducing job time, eliminating manual processes and home-grown tools, Engenix<sup>&reg;</sup> decreases expenitures.
+        </p>
       </div>
     </div>
   </div>

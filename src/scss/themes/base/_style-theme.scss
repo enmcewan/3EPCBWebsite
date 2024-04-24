@@ -1,5 +1,6 @@
 :root {
-  $green-gradient: linear-gradient(to right bottom, #34ab00, #050);
+  --green-gradient: linear-gradient(to right bottom, #34ab00, #050);
+  --eee-yellow: hsl(37deg 85.58% 70.54%);
 }
 
 body {
@@ -102,11 +103,11 @@ body {
 }
 
 .fill-height {
-  min-height: calc(100vh - 136px);
+  min-height: calc(100vh - 160px);
 }
 
 .eee-green-grd {
-  background-image: linear-gradient(to right bottom, #34ab00, #050);
+  background-image: var(--green-gradient)
 }
 
 .eee-clip-text {
@@ -114,10 +115,37 @@ body {
   color: transparent;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
+.bs-svg-size {
+  height: 3rem;
+  width: 3rem;
+
+}
+
+.bs-svg-color {
+  color: var(--eee-yellow);
+  fill: currentColor;
+}
+
+.yellow-text {
+  color: var(--eee-yellow);
+}
+
+svg {
+  fill: currentColor;
+}
+
 ol, ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.title-case {
+  text-transform: capitalize;
 }
 
 .btn:hover {
@@ -140,9 +168,9 @@ ol, ul {
   transform: rotateY(0);
 }
 
-.card__side--front {
-  background-color: #fff;
-}
+// .card__side--front {
+//   background-color: #fff;
+// }
 
 .card__side {
   height: 100%;

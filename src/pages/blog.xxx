@@ -3,7 +3,7 @@ layout: layouts/blog.njk
 title: My personal blog
 eleventyNavigation:
   key: blog
-  order: 4
+  order: 99
 pagination:
     data: collections.post
     size: 3

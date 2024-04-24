@@ -74,6 +74,8 @@ module.exports = function(eleventyConfig) {
     }).toFormat('yyyy-LL-dd');
   });
 
+  eleventyConfig.ignores.delete("./src/pages/blog.njk");
+
   eleventyConfig.addPlugin(navigationPlugin);
 
   return {
