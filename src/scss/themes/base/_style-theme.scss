@@ -1,5 +1,6 @@
 :root {
   --green-gradient: linear-gradient(to right bottom, #34ab00, #050);
+  --cu-gradient: linear-gradient(to right bottom, rgb(255, 186, 73), rgb(58, 40, 12));
   --eee-yellow: hsl(37deg 85.58% 70.54%);
 }
 
@@ -120,8 +121,8 @@ body {
 }
 
 .bs-svg-size {
-  height: 3rem;
-  width: 3rem;
+  height: 2.7rem;
+  width: 2.7rem;
 
 }
 
@@ -242,11 +243,11 @@ ol, ul {
 }
 
 .card__heading-span--2 {
-  background-image: linear-gradient(to right bottom, rgb(255, 186, 73), rgb(58, 40, 12));
+  background-image: var(--cu-gradient)
 }
 
-.copper-fade {
-  background-image: linear-gradient(to right bottom, rgb(255, 186, 73), rgb(58, 40, 12));
+.bg-copper-fade {
+  background-image: var(--cu-gradient)
 }
 
 .card__heading-span {
@@ -256,7 +257,6 @@ ol, ul {
 }
 
 .text-Eyellow {
-  --tw-text-opacity: 1;
   color: rgba(255, 186, 73, var(--tw-text-opacity));
 }
 
