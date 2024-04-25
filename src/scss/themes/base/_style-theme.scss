@@ -154,6 +154,21 @@ ol, ul {
   box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
 }
 
+
+.navbar-nav {
+  font-variant: small-caps;
+  font-weight: 600;
+}
+
+.navbar-nav li:hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color:  green;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 3px;
+
+}
+
 .landing-card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -324,10 +339,6 @@ ol, ul {
 
 .btn--white {
   background-color: whitesmoke;
-}
-
-.navbar-nav {
-  font-variant: small-caps;
 }
 
 @include media-breakpoint-up(xs) {
