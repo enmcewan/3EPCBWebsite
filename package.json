@@ -10,7 +10,7 @@
   "main": "index.html",
   "scripts": {
     "build": "npm run clean && npm run clean-prod  && npx eleventy && gulp sass && gulp dist-assets && gulp minify-css && gulp prod-copy && gulp inject-min-css && gulp purgecss && gulp minify-html",
-    "build-dev": "eleventy && gulp dist-assets && gulp sass",
+    "build-dev": "eleventy && gulp dist-assets && gulp sass && npm run serve",
     "11ty": "eleventy && gulp inject-css",
     "sync": "gulp browser-sync",
     "watch-dev": "npm run build-dev && npm run sync",

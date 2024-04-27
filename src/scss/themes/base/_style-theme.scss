@@ -1,6 +1,7 @@
 :root {
   --green-gradient: linear-gradient(to right bottom, #34ab00, #050);
   --green-gradient2: linear-gradient(to right bottom, hsl(102, 100%, 33%), hsl(111, 100%, 23%));
+  --green-gradient3: linear-gradient(to bottom, hsl(102, 100%, 33%), hsl(111, 100%, 23%));
   --cu-gradient: linear-gradient(to right bottom, rgb(255, 186, 73), rgb(58, 40, 12));
   --eee-yellow: hsl(37deg 85.58% 70.54%);
 }
@@ -114,6 +115,10 @@ body {
 
 .eee-green-grd2 {
   background-image: var(--green-gradient2)
+}
+
+.eee-green-grd3 {
+  background-image: var(--green-gradient3)
 }
 
 .eee-clip-text {
@@ -304,15 +309,8 @@ ol, ul {
   text-align: center;
   color: #fff;
   margin-bottom: 8rem;
-}
-
-.card__price-only {
-  font-size: 1.4rem;
+  font-size: clamp(3rem, 20vw, 5rem);
   text-transform: uppercase;
-}
-
-.card__price-value {
-  font-size: 6rem;
   font-weight: 300;
 }
 
