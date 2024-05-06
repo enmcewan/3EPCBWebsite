@@ -1,23 +1,25 @@
 <footer>
     <div class="container-fluid eee-green-grd3 text-light">
-        <div class="container p-5 text-center">
-            <div class="terms">
-                <a href="/terms/index.html" target="_blank" rel="noopener" class="yellow-text">
-                    Terms & Conditions
-                </a>
-            </div>
-            <div class="terms">
-                <a href="/privacy/index.html" target="_blank" rel="noopener" class="yellow-text">
-                    Privacy Policy
-                </a>
-            </div>
-            <div class="terms">
-                <a href="/terms-of-service/index.html" target="_blank" rel="noopener" class="yellow-text">
-                    Terms of Service
-                </a>
+        <div class="container pt-5 pb-2 text-center">
+            <div class="legal-cont d-flex justify-content-center mb-5">
+                <div class="me-5 ">
+                    <a href="/terms/index.html" target="_blank" rel="noopener" class="yellow-text">
+                        Terms & Conditions
+                    </a>
+                </div>
+                <div class="me-5 ">
+                    <a href="/privacy/index.html" target="_blank" rel="noopener" class="yellow-text">
+                        Privacy Policy
+                    </a>
+                </div>
+                <div class="me-5 ">
+                    <a href="/terms-of-service/index.html" target="_blank" rel="noopener" class="yellow-text">
+                        Terms of Service
+                    </a>
+                </div>
             </div>
             <div>
-                <p class="mb-0 small-text">© Copyright 2024 3E PCB Software 2024</p>
+                <p class="mb-0 small-text">© 2024 3E PCB Software LLC.</p>
                 <hr>
                 <p class="text-light"><small>Website designed and developed by <span><a href="https://lauris-webdev.com/" target="_blank" rel="noopener" class="yellow-text"><span>Lauris Consulting</span></a></span></small></p>
             </div>
@@ -27,17 +29,41 @@
 
 <script src="{{ '/js/bootstrap.bundle.min.js' | url }}"></script>
 <script>
+
     const matchPrefersLight = window.matchMedia('(prefers-color-scheme:light)');
+    const logoImg = document.getElementById('3elogoimg');
 
     if (matchPrefersLight.matches) {
+
         document.documentElement.setAttribute('data-bs-theme', 'light');
+
+        logoImg.src = '/img/3ELogo3.png';
+
     } else {
-       document.documentElement.setAttribute('data-bs-theme', 'dark'); 
+
+       document.documentElement.setAttribute('data-bs-theme', 'dark');
+
+       logoImg.src = '/img/3ELogo3-inverse.png';
+
     }
     matchPrefersLight.addEventListener('change', event => {
-        document.documentElement.setAttribute('data-bs-theme', event.matches ? "light" : "dark");
+
+        //document.documentElement.setAttribute('data-bs-theme', event.matches ? "light" : "dark");
+
+        if (event.matches) {
+
+            document.documentElement.setAttribute('data-bs-theme', 'light');
+
+            logoImg.src = '/img/3ELogo3.png';
+
+        } else {
+
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+
+            logoImg.src = '/img/3ELogo3-inverse.png';
+
+        }
     });
 
-    console.log('matchPrefersLight', matchPrefersLight.matches)
 </script>
 

@@ -1,7 +1,7 @@
 :root {
   --green-gradient: linear-gradient(to right bottom, #34ab00, #050);
   --green-gradient2: linear-gradient(to right bottom, hsl(102, 100%, 33%), hsl(111, 100%, 23%));
-  --green-gradient3: linear-gradient(to bottom, hsl(102, 100%, 33%), hsl(111, 100%, 23%));
+  --green-gradient3: linear-gradient(to bottom, hsl(105, 100%, 28%), hsl(114, 100%, 20%));
   --cu-gradient: linear-gradient(to right bottom, rgb(255, 186, 73), rgb(58, 40, 12));
   --eee-yellow: hsl(37deg 85.58% 70.54%);
 }
@@ -106,22 +106,28 @@ body {
 }
 
 .fill-height {
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 62px);
 }
 
 .eee-green-grd {
-  background-image: var(--green-gradient)
+  background-image: var(--green-gradient);
 }
 
 .eee-green-grd2 {
-  background-image: var(--green-gradient2)
+  background-image: var(--green-gradient2);
 }
 
 .eee-green-grd3 {
-  background-image: var(--green-gradient3)
+  background-image: var(--green-gradient3);
 }
 
 .eee-clip-text {
+  background-clip: text;
+  color: transparent;
+}
+
+.eee-green-grd-text {
+  background-image: var(--green-gradient);
   background-clip: text;
   color: transparent;
 }
