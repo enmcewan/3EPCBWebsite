@@ -106,7 +106,11 @@ body {
 }
 
 .fill-height {
-  min-height: calc(100vh - 62px);
+  min-height: calc(100vh - 64px);
+}
+
+.min-fill-height {
+  min-height: calc(100vh - 64px - 225px);
 }
 
 .eee-green-grd {
@@ -137,8 +141,8 @@ body {
 }
 
 .bs-svg-size {
-  height: 2.7rem;
-  width: 2.7rem;
+  height: 2.4em;
+  width: 2.4em;
 
 }
 
@@ -179,7 +183,7 @@ ol, ul {
     text-decoration-line: underline;
     text-decoration-color:  green;
     text-underline-offset: 0.25em;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
   }
 }
 
@@ -194,13 +198,10 @@ ol, ul {
 .landing-card:hover .card__side--front {
   transform: rotateY(-180deg);
 }
+
 .landing-card:hover .card__side--back {
   transform: rotateY(0);
 }
-
-// .card__side--front {
-//   background-color: #fff;
-// }
 
 .card__side {
   height: 100%;
@@ -320,11 +321,6 @@ ol, ul {
   font-weight: 300;
 }
 
-.btn-lp.btn--white {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
-}
-
 .btn-lp.btn--white, .btn-lp.btn--white:link, .btn-lp.btn--white:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -338,7 +334,7 @@ ol, ul {
   cursor: pointer;
 }
 
-.btn-lp:hover {
+.btn-lp.btn--white:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%);
   background-color: white;
@@ -346,6 +342,21 @@ ol, ul {
 
 .btn--white {
   background-color: whitesmoke;
+}
+
+.benfits-bg {
+  background-image: url(/img/pcb01.svg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: color;
+}
+
+#benefits h2, h3 {
+  font-weight: 300;
+  text-decoration: underline;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 0.15em;
+  font-variant: small-caps; 
 }
 
 @include media-breakpoint-up(xs) {

@@ -5,7 +5,12 @@
   <meta name="author" content="{{ metadata.author }}">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="HandheldFriendly" content="true"/>
-  <title>{{ title or metadata.title }}</title>
+  <title>{{ displaytitle or title }}</title>
+  {% if permalink != '/' %}
+    <link rel="canonical" href="https://3epcb.com/{{permalink}}" />
+  {% else %}
+  <link rel="canonical" href="https://3epcb.com/" />
+  {% endif %}
   <!-- build:css -->
   <link rel="stylesheet" href="{{ '/css/theme.css' | url }}">
    <!-- endbuild -->
