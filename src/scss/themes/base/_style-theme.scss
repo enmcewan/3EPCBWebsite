@@ -454,6 +454,14 @@ ol, ul {
 
 }
 
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 /* SCSS HEX */
 $india-green: #248f00ff;
 $dark-green: #0a210fff;
