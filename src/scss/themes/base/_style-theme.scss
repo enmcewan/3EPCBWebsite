@@ -137,6 +137,12 @@ body {
   color: transparent;
 }
 
+.ggt {
+  background-image: var(--green-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
 .no-underline {
   text-decoration: none;
 }
@@ -438,6 +444,14 @@ ol, ul {
 
 .badge {
   --bs-badge-border-radius: unset;
+}
+
+@media (min-width: 1200px) {
+
+  h3, .h3 {
+    line-height: 1.3;
+  }
+
 }
 
 /* SCSS HEX */
