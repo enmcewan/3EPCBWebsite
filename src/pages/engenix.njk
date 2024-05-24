@@ -10,7 +10,7 @@ eleventyNavigation:
 
 <p class="lead border-top border-1 py-2 mt-3">
   As a comprehensive suite of PCB software applications, Engenix
-  <small><sup>®</sup></small>
+  <small><sup style="margin-left: -4px">®</sup></small>
   provides all the key functionality for engineers to rapidly and accurately
   process PCB engineering jobs and manage the entire process.
 </p>
@@ -18,24 +18,24 @@ eleventyNavigation:
 <p class="lead">
   Special features are provided for the following PCB technologies:
 </p>
-<ul class="lead border-bottom border-1 py-2 mb-5">
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5">
-    Conventional / Rigid
-  </li>
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5">Rigid-Flex</li>
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5">Flex</li>
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5">
+<div class="d-flex flex-wrap justify-content-between mb-3">
+  <div class="badge bg-copper-fade2 text-light fs-5">Conventional / Rigid</div>
+  <div class="badge bg-copper-fade2 text-light fs-5">Rigid-Flex</div>
+  <div class="badge bg-copper-fade2 text-light fs-5">Flex</div>
+  <div class="badge bg-copper-fade2 text-light fs-5">
     - Stiffeners, PSA's, ZIF's...
-  </li>
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5">HDI</li>
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5">
-    Embedded Components
-  </li>
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5">Assemblies</li>
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5">Hybrid</li>
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5">Metal Core</li>
-  <li class="badge bg-copper-fade2 text-light p-2 m-1 fs-5 mb-3">Heaters</li>
-</ul>
+  </div>
+  <div class="badge bg-copper-fade2 text-light fs-5">HDI</div>
+</div>
+<div
+  class="d-flex flex-wrap justify-content-between border-bottom border-1 mb-4 pb-3"
+>
+  <div class="badge bg-copper-fade2 text-light fs-5">Embedded Components</div>
+  <div class="badge bg-copper-fade2 text-light fs-5">Assemblies</div>
+  <div class="badge bg-copper-fade2 text-light fs-5">Hybrid</div>
+  <div class="badge bg-copper-fade2 text-light fs-5">Metal Core</div>
+  <div class="badge bg-copper-fade2 text-light fs-5">Heaters</div>
+</div>
 <div class="accordion" id="engenixAccordion">
   <div class="accordion-item mb-4">
     <h2 class="accordion-header">
@@ -47,7 +47,7 @@ eleventyNavigation:
         aria-expanded="true"
         aria-controls="collapseOne"
       >
-        Stack-up Generation with Impedance Control
+        Stack-up Generation & Impedance Control
       </button>
     </h2>
     <div
@@ -61,18 +61,26 @@ eleventyNavigation:
           considering dielectric constants, thickness, tolerance, cost, ply &
           symmetry.
         </p>
+        <img
+          class="d-block mx-auto img-fluid mb-3 eee-box-shadow1"
+          src="/img/stackup.png"
+          alt="PCB Stack-up Editor"
+        />
         <h3 class="ggt fs-4">Scenarios / Recipes for Rapid Generation</h3>
         <p>
-          Scenarios/recipes are available a time-saving solution and guide the
-          engineers to quickly iterate through different stack-up options and
-          preferred builds.
+          Scenarios/recipes are available as a time-saving solution and guide
+          the engineers to quickly iterate through different stack-up options
+          and preferred builds.
         </p>
         <h3 class="ggt fs-4">Manual Builds & Changes with Stack-up Editor</h3>
         <p>
           The Stack-up Editor in Engenix allows for manual builds and on-the-fly
-          adjustments. Engineers can customize layer configurations with
-          precision, making real-time changes that reflect immediately in the
-          design, offering a hands-on approach to stack-up creation.
+          adjustments.
+          <strong>
+            Engineers can customize layer configurations with precision, making
+            real-time changes that reflect immediately in the design
+          </strong>
+          , offering a hands-on approach to stack-up creation.
         </p>
         <h3 class="ggt fs-4">Drilled / Routed Materials for Flex & R-Flex</h3>
         <p>
@@ -90,10 +98,13 @@ eleventyNavigation:
         </p>
         <h3 class="ggt fs-4">Integrated Impedance / Impedance Driven</h3>
         <p>
-          Engenix is fully integrated with Impedance Calculation tools, making
-          it an impedance-driven design platform. This integration ensures that
-          impedance considerations are at the forefront of the design process,
-          leading to PCBs that meet stringent electrical performance criteria.
+          <strong>
+            Engenix is fully integrated with Impedance Calculation tools
+          </strong>
+          , making it an impedance-driven design platform. This integration
+          ensures that impedance considerations are at the forefront of the
+          design process, leading to PCBs that meet stringent electrical
+          performance criteria.
         </p>
         <h3 class="ggt fs-4">
           Automatic ERP Part Search & Match with Inventory Count
@@ -105,7 +116,7 @@ eleventyNavigation:
           overstocking or part shortages.
         </p>
         <h3 class="ggt fs-4">
-          Automated Manufactured Part Creation & Alternate Build Types
+          Automatic Manufactured Part Creation & Alternate Build Types
         </h3>
         <p>
           Engenix simplifies the manufacturing process with Automated
@@ -184,7 +195,7 @@ eleventyNavigation:
           and value-by-value to ensure any changes are correct.
         </p>
         <img
-          class="d-block mx-auto img-fluid mb-2"
+          class="d-block mx-auto img-fluid mb-3 eee-box-shadow1"
           src="/img/RouteCompare01.png"
           alt="PCB Route Comparison with Manual Step"
         />
@@ -197,8 +208,8 @@ eleventyNavigation:
         </p>
         <h4 class="ggt">Statistical Process Control (SPC)</h4>
         <p>
-          As per the costing parameters, Engenix® can generate the key data for
-          SPC processing.
+          As per the CRP parameters, Engenix® can generate the key data for
+          SPC data processing.
         </p>
         <h4 class="ggt">Extended Route Step Data</h4>
         <p>
@@ -208,10 +219,12 @@ eleventyNavigation:
         </p>
         <h3 class="ggt">Costing</h3>
         <p>
-          Accurate job costing is a core business essential for measuring
-          profitability and calculating competitive pricing. Engenix® will
-          seemlessly calculate cost for each step as needed and provide a
-          breakdown of the key costing components:
+          <strong>
+            Accurate job costing is a core business essential for measuring
+            profitability and calculating competitive pricing.
+          </strong>
+          Engenix® will seemlessly calculate cost for each step as needed and
+          provide a breakdown of the key costing components:
         </p>
         <ul class="mb-3">
           <li>Set-Up</li>
@@ -249,18 +262,37 @@ eleventyNavigation:
       data-bs-parent="#engenixAccordion"
     >
       <div class="accordion-body">
+        <h3 class="ggt">Engineering Data Tables</h3>
         <p>
-          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-          amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-          erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-          et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+          PCB engineering involves referencing numerous sets of data. From stack
+          heights, electrical test voltages, packaging requirements, process
+          line selection, CNC Drill Entry Sheet selection, et al.
+        </p>
+        <p>
+          Engenix® provides extensive customizability, including user-defined
+          engineering tables.
+          <strong>
+            Now, all the spreadsheets, print-outs and standalone databases can
+            be consolidated into the Engenix® knowledgebase.
+          </strong>
+          Managing and maintaining the data is a snap and changes are
+          immediately available to update jobs when running the rules.
+        </p>
+        <img
+          class="d-block mx-auto img-fluid mb-3 eee-box-shadow1"
+          src="/img/eng-table.png"
+          alt="PCB Route Comparison with Manual Step"
+        />
+        <h3 class="ggt">Tooling Control</h3>
+        <p>
+          Effective tooling control is pivotal in managing changes required in
+          manufacturing. PCB jobs are run with numerous tools. Each tool can
+          have it's own life-cycle and revision history and it is critical to
+          synchronize the current toolset with production.
+        </p>
+        <p>
+          Engineers now have precise control over each tool. Multiple revisions
+          are tracked along with date and timestamps for every change.
         </p>
       </div>
     </div>
@@ -301,17 +333,25 @@ eleventyNavigation:
         <p>
           By accessing data directly from source, Engenix® ensures there are no
           errors introduced when using information from other systems. Follow
-          <a href="/engenix-cam-erp-impedance-integration/">this link</a>
+          <a href="/engenix-cam-erp-impedance-integration/" class="link-fancy">this link</a>
           for more information on Engenix®'s integration capabilities.
         </p>
         <h3 class="ggt">Customer Specifications</h3>
         <p>
-          With Customer Specification validation, Engenix® ensures that every
-          PCB is built to meet the precise requirements set forth by the client.
+          <strong>
+            With Customer Specification validation, Engenix® ensures that every
+            PCB is built to meet the precise requirements set forth by the
+            client.
+          </strong>
           This feature cross-references each specification against the job's
           attributes, guaranteeing that the final product aligns perfectly with
           customer expectations.
         </p>
+        <img
+          class="d-block mx-auto img-fluid mb-3 eee-box-shadow1"
+          src="/img/attr-grid.png"
+          alt="PCB Route Attribute Editor"
+        />
         <h3 class="ggt">Manufacturing Capabilities</h3>
         <p>
           Understanding the thresholds and manufacturing capabilities allows
@@ -325,17 +365,20 @@ eleventyNavigation:
         <h3 class="ggt">Data Entry Validation</h3>
         <p>
           Even in today's data-driven world, some manual entry and user-choices
-          are required when setting up a job. As engineers start the data entry
-          process, each item is checked and validated according to the
-          engineering rules. Users are immediately notified of any issues and
-          prevented from making invalid entries or choices that conflict.
+          are required when setting up a job.
+          <strong>
+            As engineers start the data entry process, each item is checked and
+            validated according to the engineering rules.
+          </strong>
+          Users are immediately notified of any issues and prevented from making
+          invalid entries or choices that conflict.
         </p>
         <h3 class="ggt">Run-Time Rule Processing Validation</h3>
         <p>
-          Once a job is set up and ready to process, further checking is performed
-          by the engineering rules as a final catch-all during route generation
-          where the complete picture is known and furthers check may be necessary
-          at the process step level where further validation can be needed.
+          Once a job is set up and ready to process, further checking is
+          performed by the engineering rules as a final catch-all during route
+          generation where the complete picture is known and checks may be
+          necessary at the process step level.
         </p>
         <p>
           With data validation and checking built in across the board, Engenix®

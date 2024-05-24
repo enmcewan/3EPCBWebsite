@@ -442,9 +442,9 @@ ol, ul {
   box-shadow: 0 0 0 0.25rem hsla(105, 100%, 28%, 0.514)
 }
 
-.badge {
-  --bs-badge-border-radius: unset;
-}
+// .badge {
+//   --bs-badge-border-radius: unset;
+// }
 
 @media (min-width: 1200px) {
 
@@ -461,6 +461,18 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+.pcb-tech-cont {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 0;
+  column-gap: .5rem;
+}
+
+// #tech-cont> * {
+//   min-width: 0px;
+// }
 
 /* SCSS HEX */
 $india-green: #248f00ff;

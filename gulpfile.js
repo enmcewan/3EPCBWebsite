@@ -51,7 +51,7 @@ gulp.task('minify-html', () => {
 
 // Purging unused CSS
 gulp.task('purgecss', () => {
-    return gulp.src('public/css/theme.min.css')
+    return gulp.src('public/css/theme.min.A.css')
         .pipe(purgecss({
             content: ['public/**/*.html'],
             safelist: ['collapsed', 'collapse', 'active', 'show', 'collapsing' ]
@@ -116,7 +116,7 @@ gulp.task('sass', function () {
 gulp.task('inject-min-css', function(done) {
   gulp.src('./public/**/*.html')
     .pipe(htmlreplace({
-        'css': '/css/theme.min.css'
+        'css': '/css/theme.min.A.css'
     }))
     .pipe(gulp.dest('./public'));
          done();

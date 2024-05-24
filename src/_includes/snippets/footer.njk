@@ -5,8 +5,6 @@
         <div class="me-5">
           <a
             href="/engenix-support/"
-            target="_blank"
-            rel="noopener"
             class="yellow-text"
           >
             Customer Support
@@ -15,8 +13,6 @@
         <div class="me-5">
           <a
             href="/contact-3epcb-software/"
-            target="_blank"
-            rel="noopener"
             class="yellow-text"
           >
             Contact
@@ -27,8 +23,6 @@
         <div class="me-5">
           <a
             href="/3epcb-software-terms-conditions/"
-            target="_blank"
-            rel="noopener"
             class="yellow-text"
           >
             Terms & Conditions
@@ -37,8 +31,6 @@
         <div class="me-5">
           <a
             href="/3epcb-privacy-policy/"
-            target="_blank"
-            rel="noopener"
             class="yellow-text"
           >
             Privacy Policy
@@ -47,8 +39,6 @@
         <div class="me-5">
           <a
             href="/3epcb-terms-of-service/"
-            target="_blank"
-            rel="noopener"
             class="yellow-text"
           >
             Terms of Service
@@ -77,22 +67,12 @@
 </footer>
 <script src="{{ '/js/bootstrap.bundle.min.js' | url }}"></script>
 <script>
-  const userPrefersLight = window.matchMedia("(prefers-color-scheme:light)");
-  const logoImg = document.getElementById("3elogoimg");
+  (function() {
 
-  if (userPrefersLight.matches) {
-    document.documentElement.setAttribute("data-bs-theme", "light");
+    const userPrefersLight = window.matchMedia("(prefers-color-scheme:light)");
+    const logoImg = document.getElementById("3elogoimg");
 
-    logoImg.src = "/img/3ELogo3.png";
-  } else {
-    document.documentElement.setAttribute("data-bs-theme", "dark");
-
-    logoImg.src = "/img/3ELogo3-inverse.png";
-  }
-  userPrefersLight.addEventListener("change", (event) => {
-    //document.documentElement.setAttribute('data-bs-theme', event.matches ? "light" : "dark");
-
-    if (event.matches) {
+    if (userPrefersLight.matches) {
       document.documentElement.setAttribute("data-bs-theme", "light");
 
       logoImg.src = "/img/3ELogo3.png";
@@ -101,5 +81,19 @@
 
       logoImg.src = "/img/3ELogo3-inverse.png";
     }
-  });
+    userPrefersLight.addEventListener("change", (event) => {
+      //document.documentElement.setAttribute('data-bs-theme', event.matches ? "light" : "dark");
+
+      if (event.matches) {
+        document.documentElement.setAttribute("data-bs-theme", "light");
+
+        logoImg.src = "/img/3ELogo3.png";
+      } else {
+        document.documentElement.setAttribute("data-bs-theme", "dark");
+
+        logoImg.src = "/img/3ELogo3-inverse.png";
+      }
+    });
+
+  })();
 </script>
