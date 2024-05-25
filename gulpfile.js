@@ -15,7 +15,7 @@ var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
 
 var date = new Date();
-var cbString = `${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}${date.getHours()}`;
+var cbString = `theme.${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}${date.getHours()}`;
 
 gulp.task('dist-assets', function (done) {
     gulp.src('./src/js/**.*')
@@ -129,7 +129,7 @@ gulp.task('inject-min-css', function(done) {
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task( 'copy-assets', function( done ) {
-	////////////////// All Bootstrap 4 Assets /////////////////////////
+	////////////////// All Bootstrap 5 Assets /////////////////////////
 	// Copy all JS files
 	var stream = gulp
 		.src( paths.node + '/bootstrap/dist/js/**/*.*' )
