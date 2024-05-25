@@ -14,6 +14,9 @@ var reload      = browserSync.reload;
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
 
+var date = new Date();
+var cbString = `${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}${date.getDay()}${date.getHours()}`;
+
 gulp.task('dist-assets', function (done) {
     gulp.src('./src/js/**.*')
         .pipe(gulp.dest('./dev/js'));
@@ -34,9 +37,11 @@ gulp.task('minify-css', () => {
   return gulp
     .src('dev/css/*.css')
     .pipe(cleanCSS({
-      compatibility: 'ie8'
+      compatibility: '*'
     }))
-    .pipe( rename( { suffix: '.min' } ) )
+    .pipe( rename({ 
+      basename: `${cbString}`,
+      suffix: '.min' } ))
     .pipe(gulp.dest('dev/css'))
     .pipe(browserSync.stream());
 });
@@ -51,7 +56,7 @@ gulp.task('minify-html', () => {
 
 // Purging unused CSS
 gulp.task('purgecss', () => {
-    return gulp.src('public/css/theme.min.A.css')
+    return gulp.src(`public/css/${cbString}.min.css`)
         .pipe(purgecss({
             content: ['public/**/*.html'],
             safelist: ['collapsed', 'collapse', 'active', 'show', 'collapsing' ]
@@ -85,6 +90,7 @@ gulp.task('clean-dev', function() {
     .pipe(clean());
 });
 
+
 gulp.task('clean', function() {
   return gulp.src('dev/scss', {
       read: false
@@ -106,6 +112,7 @@ gulp.task('browser-sync', function(done) {
 gulp.watch("dev/**/*.*").on('change', browserSync.reload);
 });
 
+
 // Compile sass to css
 gulp.task('sass', function () {
   return gulp.src('src/scss/theme.scss')
@@ -116,7 +123,7 @@ gulp.task('sass', function () {
 gulp.task('inject-min-css', function(done) {
   gulp.src('./public/**/*.html')
     .pipe(htmlreplace({
-        'css': '/css/theme.min.A.css'
+        'css': `/css/${cbString}.min.css`
     }))
     .pipe(gulp.dest('./public'));
          done();
