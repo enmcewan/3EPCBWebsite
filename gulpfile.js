@@ -15,7 +15,7 @@ var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
 
 var date = new Date();
-var cbString = `${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}${date.getDay()}${date.getHours()}`;
+var cbString = `${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}${date.getHours()}`;
 
 gulp.task('dist-assets', function (done) {
     gulp.src('./src/js/**.*')
@@ -90,7 +90,6 @@ gulp.task('clean-dev', function() {
     .pipe(clean());
 });
 
-
 gulp.task('clean', function() {
   return gulp.src('dev/scss', {
       read: false
@@ -111,7 +110,6 @@ gulp.task('browser-sync', function(done) {
     });
 gulp.watch("dev/**/*.*").on('change', browserSync.reload);
 });
-
 
 // Compile sass to css
 gulp.task('sass', function () {
