@@ -35,12 +35,14 @@
       font-weight: 100 1000;
       font-stretch: 25% 150%
     }
-   @font-face {
-     font-family: 'Days One';
-     font-style: normal;
-     font-weight: 400;
-     font-display: swap;
-     src: local(''),
-          url('/fonts/DaysOne-Regular.ttf') format('truetype'); 
-   }
+    @font-face {
+      font-family: "Noto Sans Mono";
+      font-style: normal;
+      font-display: swap;
+      src: local(),
+           url("/fonts/NotoSansMono-VariableFont_wdth,wght.ttf") format("truetype-variations"),
+           url("/fonts/NotoSansMono-VariableFont_wdth,wght.ttf") format("truetype") tech("variations");
+      font-weight: 100 1000;
+      font-stretch: 25% 150%
+    }
    </style>
