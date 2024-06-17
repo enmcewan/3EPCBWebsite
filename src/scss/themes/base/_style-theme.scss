@@ -106,6 +106,10 @@ body {
   // background-clip: text;
 }
 
+.display-3 {
+  line-height: 1.25;
+}
+
 .fill-height {
   min-height: calc(100vh - 64px);
 }
@@ -366,9 +370,9 @@ ol, ul {
 
 #benefits h2, #benefits h3 {
   font-weight: 300;
-  text-decoration: underline;
-  text-decoration-thickness: 1px !important;
-  text-underline-offset: 0.15em;
+  // text-decoration: underline;
+  // text-decoration-thickness: 1px !important;
+  // text-underline-offset: 0.15em;
   font-variant: small-caps; 
 }
 
