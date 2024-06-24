@@ -11,6 +11,10 @@ body {
   letter-spacing:-.02rem;
 }
 
+p, li {
+  font-size: 1.125rem;
+}
+
 .link-fancy {
   text-decoration: none;
   display: inline-block;
@@ -464,18 +468,16 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-}
-
-th {
-  color: transparent !important;
 } 
 
 .thc {
   text-align: center;
+  color: transparent !important;
 }
 
 .thr {
   vertical-align: middle;
+  color: transparent !important;
 }
 
 .bg-pcb {
@@ -483,6 +485,10 @@ th {
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: luminosity;
+}
+
+figcaption {
+  font-style: italic;
 }
 
 /* SCSS HEX */

@@ -1,74 +1,61 @@
 <footer>
   <div class="container-fluid text-bg-secondary">
-    <div class="container pt-5 pb-2 text-center">
-      <div class="d-flex justify-content-center mb-5 fs-3 fw-semibold" style="font-variant: small-caps;">
-        <div class="me-5">
-          <a
-            href="/engenix-support/"
-            class="yellow-text"
-          >
-            Customer Support
-          </a>
+    <div class="container pt-4 pb-2 text-center">
+      <div
+        class="d-flex justify-content-center mb-4 fs-3 fw-semibold"
+        style="font-variant: small-caps"
+      >
+        <div class="px-5">
+          <a href="/engenix-support/" class="yellow-text">Support</a>
         </div>
-        <div class="me-5">
-          <a
-            href="/contact-3epcb-software/"
-            class="yellow-text"
-          >
-            Contact
-          </a>
+        <div class="px-5">
+          <a href="/contact-3epcb-software/" class="yellow-text">Contact</a>
         </div>
       </div>
-      <div class="d-flex justify-content-center mb-5">
-        <div class="me-5">
-          <a
-            href="/3epcb-software-terms-conditions/"
-            class="yellow-text"
-          >
+      <div class="d-flex justify-content-center mb-4 yellow-text">
+        <div class="px-4">
+          <a href="/3epcb-software-terms-conditions/" class="yellow-text">
             Terms & Conditions
           </a>
         </div>
-        <div class="me-5">
-          <a
-            href="/3epcb-privacy-policy/"
-            class="yellow-text"
-          >
+        <div class="px-4">
+          <a href="/3epcb-privacy-policy/" class="yellow-text">
             Privacy Policy
           </a>
         </div>
-        <div class="me-5">
-          <a
-            href="/3epcb-terms-of-service/"
-            class="yellow-text"
-          >
+        <div class="px-4">
+          <a href="/3epcb-terms-of-service/" class="yellow-text">
             Terms of Service
           </a>
         </div>
       </div>
       <div>
-      <p class="mb-0 small-text">© 2024 3E PCB Software LLC.</p>
-      <hr />
-      <p class="text-light">
-        <small
-          >Website designed and developed by
-          <span>
-              <a
-              href="https://lauris-webdev.com/"
-              target="_blank"
-              rel="noopener"
-              class="yellow-text"
-              ><span>Lauris Consulting</span></a
-            ></span
-          ></small>
-      </p>
+        <hr />
+        <div class="d-flex justify-content-center mb-4">
+          <div class="text-light px-4">© 2024 3E PCB Software LLC.</div>
+          <div class="text-light px-4">
+            <small>
+              Website designed and developed by
+              <span>
+                <a
+                  href="https://lauris-webdev.com/"
+                  target="_blank"
+                  rel="noopener"
+                  class="yellow-text"
+                >
+                  <span>Lauris Consulting</span>
+                </a>
+              </span>
+            </small>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </footer>
 <script src="{{ '/js/bootstrap.bundle.min.js' | url }}"></script>
 <script>
-  (function() {
-
+  (function () {
     const userPrefersLight = window.matchMedia("(prefers-color-scheme:light)");
     const logoImg = document.getElementById("3elogoimg");
 
@@ -94,6 +81,5 @@
         logoImg.src = "/img/3ELogo3-inverse.png";
       }
     });
-
   })();
 </script>

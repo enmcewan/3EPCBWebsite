@@ -1,7 +1,7 @@
 {
-  "name": "11straps",
+  "name": "3epcbwebsite",
   "version": "1.0.0",
-  "description": "simple 11ty and Bootstrap5 boilerplate",
+  "description": "11ty and Bootstrap5 started with 11straps",
   "license": "MIT",
   "private": "true",
   "publishConfig": {
@@ -55,8 +55,5 @@
     "url": "https://github.com/enmcewan/3ePCBNewWebsite"
   },
   "keywords": [],
-  "bugs": {
-    "url": ""
-  },
   "homepage": "https://3epcb.com/"
 }
