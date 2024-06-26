@@ -57,16 +57,16 @@
 <script>
   (function () {
     const userPrefersLight = window.matchMedia("(prefers-color-scheme:light)");
-    const logoImg = document.getElementById("3elogoimg");
+    //const logoImg = document.getElementById("3elogoimg");
 
     if (userPrefersLight.matches) {
       document.documentElement.setAttribute("data-bs-theme", "light");
 
-      logoImg.src = "/img/3ELogo3.png";
+  //    logoImg.src = "/img/3ELogo3.png";
     } else {
       document.documentElement.setAttribute("data-bs-theme", "dark");
 
-      logoImg.src = "/img/3ELogo3-inverse.png";
+  //    logoImg.src = "/img/3ELogo3-inverse.png";
     }
     userPrefersLight.addEventListener("change", (event) => {
       //document.documentElement.setAttribute('data-bs-theme', event.matches ? "light" : "dark");
@@ -74,11 +74,11 @@
       if (event.matches) {
         document.documentElement.setAttribute("data-bs-theme", "light");
 
-        logoImg.src = "/img/3ELogo3.png";
+  //      logoImg.src = "/img/3ELogo3.png";
       } else {
         document.documentElement.setAttribute("data-bs-theme", "dark");
 
-        logoImg.src = "/img/3ELogo3-inverse.png";
+  //      logoImg.src = "/img/3ELogo3-inverse.png";
       }
     });
   })();
