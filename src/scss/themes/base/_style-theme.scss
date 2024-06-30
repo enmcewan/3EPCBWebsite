@@ -5,6 +5,7 @@
   --cu-gradient: linear-gradient(to right bottom, rgb(255, 186, 73), rgb(58, 40, 12));
   --cu-gradient2: linear-gradient(to right bottom, rgb(197, 145, 61), rgb(126, 98, 52));
   --eee-yellow: hsl(37deg 85.58% 70.54%);
+  accent-color: #248f00ff;
 }
 
 body {
@@ -119,7 +120,7 @@ p, li {
 }
 
 .min-fill-height {
-  min-height: calc(100vh - 64px - 225px);
+  min-height: calc(100vh - 64px - 211px);
 }
 
 .eee-green-grd {

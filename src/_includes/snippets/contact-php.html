@@ -1,0 +1,84 @@
+<?php
+    // POST variables require "name" tags for the HTML form input elements. The main form tag needs to have the post method added
+    $error = "";
+    $successMessage = "";
+
+    if ($_POST) {
+        //print_r($_POST);
+        
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+        $phone = htmlspecialchars($_POST['phone']);
+        $subject = "Website Contact Message";
+        $message =  htmlspecialchars($_POST['message']);
+        $body = "";
+        $contactMethod = $_POST['inlineRadioOptions'];
+        //<!-- $captcha=$_POST['g-recaptcha-response']; -->
+        $captcha=$_POST['captcha-response'];
+
+        if ($captcha !== "") {
+            $secretKey = "6LdD0gQqAAAAAGv5XHySmTXPjiPLW77ESiSNm8XT";
+            // post request to server
+            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+            $response = file_get_contents($url);
+            $responseKeys = json_decode($response,true);
+            //sprint_r($responseKeys["success"]);
+            
+            // should return JSON with success as true
+            if(!$responseKeys["success"]) {
+                $error .= "bots not welcome here";
+            }
+        } else {
+            $error .= "reCAPTCHA is required ";
+        }
+
+        $URLregex = "/((http|ftp|https):\/\/)?(([\w.-]*)\.([\w]*))/i"; //catches all fully formed urls
+        $URLregex2 = "/((http|ftp|https):\/\/)/i"; //needed to catch 'http://abc' for example
+
+        if(preg_match_all($URLregex, $name, $matches) || preg_match_all($URLregex2, $name, $matches))
+        {
+            //print_r($matches[0]);
+            $error .= "Invalid Name ";
+        }
+
+        if ($email == "") {
+            $error .= "<p>Email address is required</p>";
+        }
+
+        if ($message == "" or $message == " ") {
+            $error .= "<p>Your message is not valid</p>";
+        } else {
+            // "\r\n\ = carriage return, line feed.
+            $body = "From: ".$name."\r\n"."Please contact me via ".$contactMethod."\r\n"."Phone No: ".$phone."\r\n"."Email: ".$email."\r\n"."Message:"."\r\n".$message;
+        }
+
+        if ($_POST['email'] && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === false) {          
+            $error .= "<p>The email address is invalid.</p>";        
+        }
+
+        if ($error != "") {
+            //$error = '<br><div class="alert alert-danger" role="alert"><strong>There were error(s) in your form:</strong>'.$error.'</div>';
+            $error = '<div class="alert alert-danger alert-dismissible" role="alert" style="line-height: 3rem;"><strong>There were error(s) in your form: </strong>'.$error.'
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>';
+        } else {
+            $emailTo = "info@3epcb.com";
+            //$emailTo = "iain.am.wilson@gmail.com";
+            //$headers = "From: ".$_POST['email'];
+            $headers = "From: info@3epcb.com";
+            //$headers = "From: info@lauris-webdev.com";
+            
+            if (mail($emailTo, $subject, $body, $headers)) {             
+                $successMessage = '<div class="alert alert-success alert-dismissible" role="alert" style="line-height: 3rem;">Your message was sent successfully, we\'ll get back to you shortly.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                 //   <!-- <span aria-hidden="true" style="font-size: 3rem;">&times;</span> -->
+                </button></div>';              
+            } else {              
+                $error = '<div class="alert alert-danger alert-dismissible" role="alert"><strong>Your message couldn\'t be sent - please try again later
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                  //  <!-- <span aria-hidden="true">&times;</span> -->
+                </button></div>';               
+            }
+        }
+    }
+?>

@@ -54,6 +54,7 @@
   </div>
 </footer>
 <script src="{{ '/js/bootstrap.bundle.min.js' | url }}"></script>
+{% if  title  === 'Contact' %}<script defer src="/js/contact-form.2.js"></script>{% endif %}
 <script>
   (function () {
     const userPrefersLight = window.matchMedia("(prefers-color-scheme:light)");

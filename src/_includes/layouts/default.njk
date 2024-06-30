@@ -1,3 +1,6 @@
+{%- if title == "Contact" %}
+{% include 'snippets/contact-php.html' %}
+{%- endif %}
 <!doctype html>
 <html lang="{{ metadata.language }}" data-bs-theme="{{ global.colorMode }}">
 
@@ -9,7 +12,11 @@
 
     {% include 'snippets/navbar.njk' %}
 
-    <main class="container py-5 fill-height eee-box-shadow1">
+    {%- if title == "Contact" %}
+      <main class="container py-5 min-fill-height eee-box-shadow1">
+    {%- else %}
+      <main class="container py-5 fill-height eee-box-shadow1">
+    {%- endif %}
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
           {% include 'snippets/maincontent.njk' %}
