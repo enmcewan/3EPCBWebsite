@@ -71,12 +71,10 @@
             if (mail($emailTo, $subject, $body, $headers)) {             
                 $successMessage = '<div class="alert alert-success alert-dismissible" role="alert" style="line-height: 3rem;">Your message was sent successfully, we\'ll get back to you shortly.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                 //   <!-- <span aria-hidden="true" style="font-size: 3rem;">&times;</span> -->
                 </button></div>';              
             } else {              
-                $error = '<div class="alert alert-danger alert-dismissible" role="alert"><strong>Your message couldn\'t be sent - please try again later
+                $error = '<div class="alert alert-success alert-dismissible" role="alert"><strong>Your message couldn\'t be sent - please try again later
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                  //  <!-- <span aria-hidden="true">&times;</span> -->
                 </button></div>';               
             }
         }
