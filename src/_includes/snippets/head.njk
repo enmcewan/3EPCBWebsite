@@ -6,6 +6,7 @@
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="HandheldFriendly" content="true"/>
   <title>{{ displaytitle or title }}</title>
+  <meta name="description" content="{{ description }}" />
   {% if permalink != '/' %}
     <link rel="canonical" href="https://3epcb.com/{{permalink}}" />
   {% else %}
