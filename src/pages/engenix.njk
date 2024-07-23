@@ -27,19 +27,17 @@ og:
 </p>
 <h2 class="fw-bolder ggt">PCB Technologies</h2>
 <p class="lead mb-4">Special features are provided for the following PCB technologies:</p>
-<div class="d-flex flex-wrap justify-content-around mb-3">
-  <div class="badge bg-cu-fade2 text-light fs-5">Conventional / Rigid</div>
-  <div class="badge bg-cu-fade2 text-light fs-5">Rigid-Flex</div>
-  <div class="badge bg-cu-fade2 text-light fs-5">Flex</div>
-  <div class="badge bg-cu-fade2 text-light fs-5">- Stiffeners, PSA's, ZIF's...</div>
-  <div class="badge bg-cu-fade2 text-light fs-5">HDI</div>
-</div>
-<div class="d-flex flex-wrap justify-content-around border-bottom border-2 mb-4 pb-4">
-  <div class="badge bg-cu-fade2 text-light fs-5">Embedded Components</div>
-  <div class="badge bg-cu-fade2 text-light fs-5">Assemblies</div>
-  <div class="badge bg-cu-fade2 text-light fs-5">Hybrid</div>
-  <div class="badge bg-cu-fade2 text-light fs-5">Metal Core</div>
-  <div class="badge bg-cu-fade2 text-light fs-5">Heaters</div>
+<div class="text-center border-bottom border-2 mb-4 pb-4">
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">Conventional / Rigid</span>
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">Rigid-Flex</span>
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">Flex</span>
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">- Stiffeners, PSA's, ZIF's...</span>
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">HDI</span>
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">Embedded Components</span>
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">Assemblies</span>
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">Hybrid</span>
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">Metal Core</span>
+  <span class="bg-cu-fade2 text-light fs-4 fw-bold px-2 me-2 rounded text-nowrap lh-lg">Heaters</span>
 </div>
 <div class="accordion" id="engenixAccordion">
   <div class="accordion-item mb-4">
@@ -61,7 +59,30 @@ og:
           Automatic stack-up generation produces optimal PCB builds by considering dielectric constants, thickness,
           tolerance, cost, ply & symmetry.
         </p>
-        <img class="d-block mx-auto img-fluid mb-3 eee-box-shadow1" src="/img/stackup.webp" alt="PCB Stack-up Editor" />
+        <!-- <img 
+          class="d-block mx-auto img-fluid mb-3 eee-box-shadow1"
+          srcset="
+            /img/stackup-2.webp 1034w, 
+            /img/stackup-sm.webp 880w, 
+            /img/stackup-xs.webp 418w
+          "
+          src="/img/stackup-2.webp" 
+          alt="PCB Stack-up Editor"
+          width="1034"
+          height="418"
+        /> -->
+        <picture>
+          <source media="(max-width: 475px)" srcset="/img/stackup-xs.webp" />
+          <source media="(max-width: 900px)" srcset="/img/stackup-sm.webp " />
+          <source media="(min-width: 901px)" srcset="/img/stackup-2.webp" />
+          <img 
+            class="d-block mx-auto img-fluid mb-3 eee-box-shadow1"
+            src="/img/stackup-2.webp" 
+            alt="PCB Stack-up Editor"
+            width="1034"
+            height="418"
+          />
+        </picture>
         <h3 class="ggt fs-4">Scenarios / Recipes for Rapid Generation</h3>
         <p>
           Scenarios/recipes are available as a time-saving solution and guide the engineers to quickly iterate through
@@ -97,7 +118,7 @@ og:
         <p>
           Streamline your parts procurement with Engenix's Automatic ERP Part Search. This feature automatically matches
           parts with your existing inventory, providing real-time counts and helping to prevent overstocking or part
-          shortages.
+          shortages. 
         </p>
         <h3 class="ggt fs-4">Automatic Manufactured Part Creation & Alternate Build Types</h3>
         <p>
@@ -107,7 +128,7 @@ og:
         </p>
         <h3 class="ggt fs-4">Advanced Layer Copper Thickness Control</h3>
         <p>
-          Take control of your PCB's electrical properties with Engenix's Advanced Layer Copper Thickness Control. This
+          <strong>Take control of your PCB's electrical properties </strong>with Engenix's Advanced Layer Copper Thickness Control. This
           feature allows for precise adjustments to the copper thickness of each layer, ensuring that your PCB's
           impedance and signal integrity are exactly as required.
         </p>
@@ -161,6 +182,9 @@ og:
           class="d-block mx-auto img-fluid mb-3 eee-box-shadow1"
           src="/img/RouteCompare01.webp"
           alt="PCB Route Comparison with Manual Step"
+          loading="lazy"
+          width="939"
+          height="374"
         />
         <h4 class="ggt">Scheduling (CRP) Parameters</h4>
         <p>
@@ -233,6 +257,9 @@ og:
           class="d-block mx-auto img-fluid mb-3 eee-box-shadow1"
           src="/img/eng-table.webp"
           alt="PCB Route Comparison with Manual Step"
+          loading="lazy"
+          width="1034"
+          height="401"
         />
         <h3 class="ggt">Tooling Control</h3>
         <p>
@@ -265,7 +292,10 @@ og:
         <p>
           Data integrity is critical to successful manufacturing. Engenix's 'Data Validation & Integrity' suite of
           features is designed to ensure that every piece of information, from initial design to final product, is
-          scrutinized for accuracy and consistency. This comprehensive system includes features such as CAM Import,
+          scrutinized for accuracy and consistency. 
+        </p>
+        <p>
+          This comprehensive system includes features such as CAM Import,
           which seamlessly translates design data into manufacturing information; Customer Specs validation, which
           aligns production with client requirements; Manufacturing Capabilities assessment, to confirm the feasibility
           of production; and rigorous validation protocols for both manual entry and rule processing. Together, these
@@ -291,6 +321,9 @@ og:
           class="d-block mx-auto img-fluid mb-3 eee-box-shadow1"
           src="/img/attr-grid.webp"
           alt="PCB Route Attribute Editor"
+          loading="lazy"
+          width="566"
+          height="338"
         />
         <h3 class="ggt">Manufacturing Capabilities</h3>
         <p>
