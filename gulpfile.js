@@ -14,6 +14,7 @@ var reload = browserSync.reload;
 var cfg = require('./gulpconfig.json');
 var paths = cfg.paths;
 
+// Using Date for CSS Versioning. Limited to going down to hours...with mins and seconds the build process in not quick enough for names to match.
 var date = new Date();
 var yrmndthr = `theme.${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}${date.getHours()}`;
 
@@ -127,6 +128,17 @@ gulp.task('inject-min-css', function (done) {
     .pipe(gulp.dest('./public'));
   done();
 });
+
+// Why doesn't the following function run? Can't find a place where 
+
+// gulp.task('inject-min-css-php', function (done) {
+//   gulp.src('./public/**/*.php')
+//     .pipe(htmlreplace({
+//       'css': `/css/${yrmndthr}.min.css`
+//     }))
+//     .pipe(gulp.dest('./public'));
+//   done();
+// });
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task('copy-assets', function (done) {

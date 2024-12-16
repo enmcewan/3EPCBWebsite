@@ -1,6 +1,3 @@
-{%- if title == "Contact" %}
-{% include 'snippets/contact-php.html' %}
-{%- endif %}
 <!doctype html>
 <html lang="{{ metadata.language }}" data-bs-theme="{{ global.colorMode }}">
 
@@ -12,7 +9,7 @@
 
     {% include 'snippets/navbar.njk' %}
 
-    {%- if title == 'Contact' or title == 'Support' or title == 'About' %}
+    {%- if title == 'Contact 3E PCB Software' or title == 'Support' or title == 'About' %}
       <main class="container py-5 min-fill-height eee-box-shadow2">
     {%- else %}
       <main class="container py-5 fill-height eee-box-shadow2">
