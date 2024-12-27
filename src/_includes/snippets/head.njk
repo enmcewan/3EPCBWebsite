@@ -10,26 +10,8 @@
   {% if hasOg %}
     {% include 'snippets/og.njk' %}
   {% endif %}
-  {% if permalink != '/' %}
-    <link rel="canonical" href="https://3epcb.com/{{permalink}}" />
-  {% else %}
-    <link rel="canonical" href="https://3epcb.com/" />
-  {% endif %}
-  <!-- {% if title === 'Contact' %}
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer></script>
-    <script>
-      var onloadCallback = function() {
-          grecaptcha.execute();
-      };
-
-      function setResponse(response) { 
-          document.getElementById('captcha-response').value = response; 
-      }
-      </script>
-  {% endif %} -->
-  <!-- build:css -->
+  <link rel="canonical" href="https://3epcb.com{{permalink}}" />
   <link rel="stylesheet" href="{{ '/css/theme.css' | url }}">
-   <!-- endbuild -->
    <style>
     @font-face {
       font-family: "Noto Sans";

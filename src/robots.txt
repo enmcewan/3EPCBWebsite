@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /3epcb-software-terms-conditions/index.html
+Disallow: /3epcb-terms-of-service/index.html
+Disallow: /3epcb-privacy-policy/index.html
+
+Sitemap: https://www.3epcb.com/sitemap.xml
