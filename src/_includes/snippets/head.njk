@@ -1,17 +1,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="{{ metadata.description }}">
   <link rel="icon" type="image/icon" href="{{ '/img/favicon.ico' | url }}">
   <meta name="author" content="{{ metadata.author }}">
   <meta name="generator" content="{{ eleventy.generator }}">
-  <meta name="HandheldFriendly" content="true"/>
   <title>{{ displaytitle or title }}</title>
   <meta name="description" content="{{ description }}" />
   {% if hasOg %}
     {% include 'snippets/og.njk' %}
   {% endif %}
-  <link rel="canonical" href="https://3epcb.com{{permalink}}" />
+  <link rel="canonical" href="https://www.3epcb.com{{permalink}}" />
+   <!-- build:css -->
   <link rel="stylesheet" href="{{ '/css/theme.css' | url }}">
+  <!-- endbuild -->
    <style>
     @font-face {
       font-family: "Noto Sans";
