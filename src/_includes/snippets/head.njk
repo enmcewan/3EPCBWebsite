@@ -5,9 +5,9 @@
   <meta name="generator" content="{{ eleventy.generator }}">
   <title>{{ displaytitle or title }}</title>
   <meta name="description" content="{{ description }}" />
-  {% if hasOg %}
-    {% include 'snippets/og.njk' %}
-  {% endif %}
+  {%- if hasOg -%}
+    {%- include 'snippets/og.njk' -%}
+  {%- endif %}
   <link rel="canonical" href="https://www.3epcb.com{{permalink}}" />
    <!-- build:css -->
   <link rel="stylesheet" href="{{ '/css/theme.css' | url }}">
